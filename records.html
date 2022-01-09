@@ -1,0 +1,24 @@
+<h1>Welcome to Employe List</h1>
+<table border="1px" cellspacing="10">
+	<tr>
+		<td>id</td>
+		<td>Name</td>
+		<td>Contact</td>
+		<td>Email</td>
+		<td>Password</td>
+		<td>Action</td>
+	</tr>
+	{% for i in elist %}
+	<tr>
+		<td>{{i[0]}}</td>
+		<td>{{i[1]}}</td>
+		<td>{{i[2]}}</td>
+		<td>{{i[3]}}</td>
+		<td>{{i[4]}}</td>
+		<td><a href="deleteEmp?id={{i[0]}}">Delete</a></td>
+		<td><a href="updateEmp?id={{i[0]}}">Update</a></td>
+	</tr>
+	{% endfor %}
+	
+</table>
+<a href="/home">home Page </a>
